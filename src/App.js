@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Navbar from './component/Navbar';
+import {Route,Routes} from "react-router-dom";
+import Product from './Pages/Products';
+import ModalComponent from './component/Modal';
+import { useState } from 'react';
+
 
 function App() {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Navbar />
+        <ModalComponent show={show} handleClose={handleClose} handleShow={handleShow} />
+        <Routes>
+          <Route path="/" element={<Product handleShow={handleShow} />}>
+          </Route>
+        </Routes>
     </div>
   );
 }

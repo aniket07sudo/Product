@@ -7,6 +7,66 @@
   pointer-events: none;
 }
 
+.navbar_Head {
+  width: 100%;
+  background-color:#7d7d7e;
+  height:60px;
+  display: flex;
+  align-items: center;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.fieldLabel {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+  color: black;
+}
+
+.nav_logo {
+  padding: 0 10px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.head_txt {
+  color: black;
+}
+
+.addButton {
+  background-color:rgb(222, 220, 220);
+  color: black;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  margin: 20px 0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
